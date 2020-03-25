@@ -169,6 +169,7 @@ pub enum Vendor {
     Qemu,
     Vbox, // Virtual Box
     NECVMWar, // VMWare
+    VMware, //VMware
 }
 
 impl FromStr for Vendor {
@@ -185,6 +186,7 @@ impl FromStr for Vendor {
             "QEMU" => Ok(Vendor::Qemu),
             "VBOX" => Ok(Vendor::Vbox),
             "NECVMWar" => Ok(Vendor::NECVMWar),
+            "VMware" => Ok(Vendor::VMware),
             _ => Err(BlockUtilsError::new(format!("Unknown Vendor: {}", s))),
         }
     }
